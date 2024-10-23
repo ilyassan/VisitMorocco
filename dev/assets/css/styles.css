@@ -109,8 +109,12 @@ nav .links {
     align-items: center;
     gap: 45px;
 }
-nav .links li {
+nav .links li a {
     color: var(--dark-color);
+    transition: color var(--transition-time);
+}
+nav .links li:hover a{
+    color: var(--primary-color);
 }
 @media (max-width: 767px) {
     nav .links {
@@ -132,6 +136,10 @@ nav .links li {
             text-align: center;
             border-bottom: 1px solid var(--dark-color);
             padding: 1rem;
+
+            &:hover {
+                border-color: var(--primary-color);
+            }
         }
     }
     nav .menu {
@@ -143,5 +151,4 @@ nav .links li {
     nav input[type="checkbox"]:checked  ~ label .menu {
         color: var(--primary-color);
     }
-
 }
