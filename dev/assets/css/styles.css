@@ -50,6 +50,10 @@ a {
     text-decoration: none;
     color: inherit;
 }
+button {
+    outline: none;
+    border: none;
+}
 
 /* Global */
 
@@ -78,10 +82,11 @@ body {
     font-size: 2rem;
 }
 .btn {
-    padding: 5px 15px;
-    border-radius: 20px;
+    padding: .75rem 1rem;
+    border-radius: .8rem;
     background: var(--gray-light-color);
     cursor: pointer;
+    transition: all var(--transition-time);
 }
 .btn:hover {
     background: var(--gray-dark-color);
@@ -98,9 +103,18 @@ body {
     .container {
         margin-inline: 15px;
     }
-    .title {
+    .title-section {
         font-size: 1rem;
     }
+}
+
+.title-section {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+.title-section span {
+    color: var(--primary-color);
 }
 
 /* navbar styles */
@@ -111,6 +125,7 @@ nav {
     align-items: center;
     padding-block: 20px;
     background-color: white;
+    z-index: 1;
 }
 nav .logo {
     font-size: 1.2rem;
@@ -145,7 +160,7 @@ nav .links li:hover a{
         position: absolute;
         background-color: white;
         left: 0;
-        top: -200%;
+        top: -250%;
         width: 100%;
         height: fit-content;
         flex-direction: column;
@@ -158,9 +173,11 @@ nav .links li:hover a{
         & li {
             width: 90%;
             text-align: center;
-            border-bottom: 1px solid var(--dark-color);
             padding: 1rem;
 
+            &:not(:last-of-type) {
+                border-bottom: 1px solid var(--dark-color);
+            }
             &:hover {
                 border-color: var(--primary-color);
             }
