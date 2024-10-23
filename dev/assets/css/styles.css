@@ -90,13 +90,19 @@ nav {
 }
 nav .logo {
     font-size: 1.2rem;
+    font-weight: bold;
 }
 nav .active {
     color: var(--primary-color);
 }
-nav > .menu {
+nav input[type="checkbox"] {
+    display: none;
+}
+nav .menu {
     display: none;
     font-size: 2rem;
+    cursor: pointer;
+    transition: color var(--transition-time);
 }
 nav .links {
     display: flex;
@@ -111,13 +117,15 @@ nav .links li {
         position: absolute;
         background-color: white;
         left: 0;
-        top: 100%;
+        top: -200%;
         width: 100%;
+        height: fit-content;
         flex-direction: column;
         z-index: -1;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
         gap: 0;
+        transition: top var(--transition-time);
 
         & li {
             width: 90%;
@@ -126,7 +134,14 @@ nav .links li {
             padding: 1rem;
         }
     }
-    nav > .menu {
+    nav .menu {
         display: block;
     }
+    nav input[type="checkbox"]:checked  ~ .links {
+        top: 100%;
+    }
+    nav input[type="checkbox"]:checked  ~ label .menu {
+        color: var(--primary-color);
+    }
+
 }
