@@ -1,0 +1,26 @@
+
+.cocontainer_input h1{
+    font-size: 200%;
+}
+.contact input.firs{
+    width: 48%;
+}
+input.last{
+    width: 48%;
+}
+input.email{
+    width:98%;
+}
+input.phon{
+    width: 98%;
+}
+input.message{
+    width: 98%;
+}
+input.submit{
+    width: 99%;
+}
+.continput{
+   
+    
+}
