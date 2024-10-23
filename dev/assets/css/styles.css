@@ -1,4 +1,5 @@
-/* Css Reset Styles */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=League+Spartan:wght@100..900&display=swap');/* Css Reset Styles */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -69,16 +70,36 @@ body {
     background-color: white;
 }
 
+/* define classes to reuse it */
 .container {
     margin-inline: 40px;
 }
+.title {
+    font-size: 2rem;
+}
+.btn {
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: var(--gray-light-color);
+    cursor: pointer;
+}
+.btn:hover {
+    background: var(--gray-dark-color);
+}
+.btn.active {
+    background: var(--dark-color);
+    color: white;
+}
+
 @media (max-width: 767px) {
     html {
         font-size: 12px;
     }
-
     .container {
         margin-inline: 15px;
+    }
+    .title {
+        font-size: 1rem;
     }
 }
 
