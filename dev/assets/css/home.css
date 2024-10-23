@@ -24,7 +24,7 @@
     overflow: hidden;
 }
 .inspired .controll {
-    flex-basis: 200px;
+    flex-basis: 250px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
