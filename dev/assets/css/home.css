@@ -21,6 +21,7 @@
 }
 .inspired .content {
     flex: 1;
+    overflow: hidden;
 }
 .inspired .controll {
     flex-basis: 200px;
