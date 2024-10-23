@@ -1,3 +1,4 @@
+/* style of "experience you must try" */
 .experiences {
     margin-block: 40px;
 }
@@ -12,7 +13,6 @@
     color: var(--primary-color);
 }
 
-/* styles for experiences list choice */
 .experiences .experiences-list {
     display: flex;
     gap: 10px;
@@ -66,6 +66,69 @@
         }
     }
     ::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+
+/* style of "explore morocco food" */
+.explore-food {
+    background: var(--gray-light-color);
+    padding: 20px;
+    padding-block: 40px;
+}
+
+.explore-food .title {
+    font-size: 2rem;
+    padding-block: 10px;
+    margin-bottom: 20px;
+}
+
+.explore-food .images-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.explore-food .images-container img {
+    width: 33%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.explore-food .show-more-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    button {
+        padding: 10px 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        background-color: white;
+    }
+    button:hover {
+        background: var(--dark-color);
+        color: white;
+    }
+}
+
+@media (max-width: 767px) {
+    .explore-food .images-container {
+        margin-top: 10px;
+        overflow-y: auto;
+    }
+    .explore-food .title {
+        margin-bottom: 5px;
+    }
+    .explore-food .images-container img {
+        height: 250px;
+        width: 400px;
+    }
+    ::-webkit-scrollbar {
         display: none;
     }
 }
