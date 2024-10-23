@@ -39,7 +39,9 @@ input#submit{
     border: none;
    height: 3rem;
    margin-top:2px ;
-
+}
+.container_main form input:focus{
+    box-shadow: 0 0 10px 4px #100d0a62;
 }
 .container_main form input{
     background-color:#F3F3F3 ;
@@ -53,9 +55,8 @@ input#submit{
     height: 10rem;
 }
 .container_main form input:valid{
-    background-color: #ed6e0d81;
+    background-color: #B25E39;
     transition: 3s;
-   
 }
 
 @media  screen and (max-width: 767px){
