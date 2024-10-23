@@ -1,0 +1,71 @@
+.experiences {
+    margin-block: 40px;
+}
+
+.experiences .title {
+    font-size: 2rem;
+    padding-block: 10px;
+    margin-bottom: 20px;
+}
+
+.experiences .title span {
+    color: var(--primary-color);
+}
+
+/* styles for experiences list choice */
+.experiences .experiences-list {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding-block: 10px;
+}
+
+.experiences .images-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-block: 20px;
+    
+    img {
+        width: 33%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+.experiences .find-destination-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    button {
+        padding: 10px 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--gray-light-color);
+    }
+    button:hover {
+        background: var(--dark-color);
+        color: white;
+    }
+}
+
+@media (max-width: 767px) {
+    .experiences .title {
+        margin-bottom: 5px;
+    }
+    .experiences-list {
+        flex-wrap: wrap;
+    }
+    .experiences .images-container {
+        overflow-y: auto;
+        img {
+            width: 70%;
+            height: 250px;
+        }
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
