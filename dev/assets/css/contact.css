@@ -1,26 +1,98 @@
 
-.cocontainer_input h1{
+.container_main h1{
     font-size: 200%;
+    margin-top: 4rem;
 }
-.contact input.firs{
-    width: 48%;
+.container_main p{
+    margin-bottom: 4rem;
+    font-size: 18px;
 }
-input.last{
-    width: 48%;
+.container_main{
+    margin-bottom: 8rem;
 }
-input.email{
-    width:98%;
+.firstName_lastName{
+  display: flex;
 }
-input.phon{
+.firstName_lastName div{
     width: 98%;
 }
-input.message{
+.firstName_lastName div input{
     width: 98%;
 }
-input.submit{
+input#email{
     width: 99%;
 }
-.continput{
+input#phon{
+    width: 99%;
+}
+input#message{
+    width: 99%;
+}
+input#submit{
+    width: 99%;
+}
+.container_main{
+    margin-left: 4%;
+}
+.container_main form input{
+    margin-bottom: 4%;
+    border: none;
+   height: 3rem;
+   margin-top:2px ;
+
+}
+.container_main form input{
+    background-color:#F3F3F3 ;
+    border-radius: 10px 10px 10px 10px;
+}
+.container_main form input#submit{
+    background-color: #473D3A;
+    color: #fff;
+}
+.container_main form input#message{
+    height: 10rem;
+}
+.container_main form input:valid{
+    background-color: #ed6e0d81;
+    transition: 3s;
    
+}
+
+@media  screen and (max-width: 767px){
+    .container_main h1{
+       text-align: center;
+       font-size: 250%;
+    }
+    .container_main p{
+       text-align: center;
+       font-size: 140%;
+    }
+    .firstName_lastName{
+       display: inline;
+      }
+      .firstName_lastName div{
+        width: 98%;
+    }
+    .firstName_lastName div input{
+        width: 98%;
+    }
+    input#email{
+        width:98%;
+    }
+    input#phon{
+        width: 98%;
+    }
+    input#message{
+        width: 98%;
+    }
+    input#submit{
+        width: 98%;
+    }
+    #labellastname{
+        margin-left: 0;
+    }
+    .container_main form label{
+        font-size:20px;
+    }
     
 }
