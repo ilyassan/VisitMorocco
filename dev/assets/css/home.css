@@ -128,7 +128,6 @@
 
 .experiences .experiences-list {
     display: flex;
-    gap: 10px;
     width: 100%;
     padding-block: 10px;
 }
@@ -140,7 +139,7 @@
     margin-block: 20px;
     
     img {
-        width: 33%;
+        width: 32.5%;
         height: 400px;
         object-fit: cover;
         border-radius: 10px;
@@ -169,6 +168,9 @@
 }
 
 @media (max-width: 767px) {
+    .experiences .experiences-list {
+        gap: 10px;
+    }
     .experiences .title {
         margin-bottom: 5px;
     }
