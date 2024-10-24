@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+h1{
+
+    font-size: 2rem;
+    margin-top: 9rem;
+    text-align: center;
+}
+.question1{
+    font-size: 0.7rem;
+    color: #90938F;
+    text-align: center;
+    margin-top: 1.5rem;
+
+}
+.questions{
+    margin-top: 5rem;
+}
+
+.questions div
+{
+    display: flex;
+    background-color: #F3F3F3;
+    height: 3.5rem;
+    margin-top: 0.5rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    align-items: center;
+    padding-left: 1rem;
+    justify-content: space-between;
+}
+
+.questions p{
+    font-size: 0.8rem;
+}
+.image{
+    size: 1rem;
+padding-right: 1rem;
+}
+.imgup{
+    size: 1rem;
+    padding-right: 1rem;
+}
+.note
+{
+    font-size: 0.8rem;
+    display: flex;
+    background-color: #F3F3F3;
+    height: 3.5rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    align-items: center;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    line-height: 1.6;
+}
+.question2{
+    font-size: 0.8rem;
+    color: #90938F;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+.contactus{
+    font-size: 0.8;
+    color: black;
+    padding-left: 0.2rem;
+    outline: none;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+/* --------mobile------------------------------------- */
+
+@media (max-width: 767px){
+    h1{
+    
+        font-size:2rem;
+
+    }
+    .question1{
+        font-size: 0.8rem;
+        color: #90938F;
+        text-align: center;
+        margin-top: 1.5rem;
+    
+    }
+    .questions div
+    {
+        display: flex;
+        background-color: #F3F3F3;
+        height: 3.5rem;
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .questions p{
+        font-size: 1rem;
+    }
+    .note
+{
+    display: flex;
+    background-color: #F3F3F3;
+    height: 3rem;
+    width: 102.18%;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+
+}
