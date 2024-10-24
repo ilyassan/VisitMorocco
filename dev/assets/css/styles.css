@@ -59,6 +59,7 @@ button {
 
 :root {
     --primary-color:  #B25E39;
+    --secondary-color:  #A88F68;
     --dark-color: #473D3A;
     --gray-light-color: #F3F3F3; 
     --gray-dark-color: #DDDCDC; 
@@ -96,15 +97,21 @@ body {
     color: white;
 }
 
+@media (max-width: 994px) {
+    html {
+        font-size: 14px;
+    }
+    .container {
+        margin-inline: 25px;
+    }
+}
+
 @media (max-width: 767px) {
     html {
         font-size: 12px;
     }
     .container {
         margin-inline: 15px;
-    }
-    .title-section {
-        font-size: 1rem;
     }
 }
 
