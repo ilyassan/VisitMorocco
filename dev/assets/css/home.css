@@ -36,7 +36,6 @@
 .inspired {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-block: 4rem;
     overflow: hidden;
 }
@@ -87,6 +86,7 @@
         flex-basis: auto;
         align-items: flex-start;
         gap: 1rem;
+        align-self: center;
 
         & span {
             margin: 1rem 0 0;
@@ -98,17 +98,45 @@
         margin-bottom: 0;
     }
 }
-.inspired .head .filters .btn{
-    width: 7rem;
-}
-.inspired .cards {
+.inspired .head .filters {
     display: flex;
     gap: 1rem;
-    margin-top: 3rem;
 
-    & img {
-        border-radius: 1rem;
+    & .btn {
+        width: 5.5rem;
     }
+    & input {
+        display: none;
+    }
+}
+.inspired .content .cards {
+    display: none;
+    gap: 1rem;
+    margin-top: 3rem;
+    transition: all 600ms;
+
+    & .card {
+        min-width: 340px;
+        height: 240px;
+
+        & img {
+            border-radius: 1rem;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 994px) {
+    .inspired .cards {
+        padding-inline: 2rem;
+    }
+}
+
+.inspired .content:has(input:nth-of-type(1):checked) .cards.cards1,
+.inspired .content:has(input:nth-of-type(2):checked) .cards.cards2,
+.inspired .content:has(input:nth-of-type(3):checked) .cards.cards3 {
+    display: flex;
 }
 
 /* style of "experience you must try" */
@@ -305,7 +333,10 @@
         position: relative;
         flex-basis: 400px;
 
-        & span {
+        & input {
+            display: none;
+        }
+        & label {
             left: 0;
             top: 0;
             position: absolute;
@@ -317,10 +348,6 @@
             cursor: pointer;
             transition: background-color var(--transition-time);
 
-            &.active,
-            &:hover {
-                background-color: var(--secondary-color);
-            }
             &::before {
                 content: "";
                 position: absolute;
@@ -334,44 +361,51 @@
                 border-top: .6rem solid var(--primary-color);
                 transition: border-top-color var(--transition-time);
             }
-            &:hover::before,
-            &.active::before {
-                border-top-color: var(--secondary-color);
-            }
+        }
+        & input:checked + label::before,
+        & label:hover::before {
+            border-top-color: var(--secondary-color);
+        }
+        & input:checked + label,
+        & label:hover{
+            background-color: var(--secondary-color);
         }
 
-        #dakhla {
+        & label[for="dakhla"] {
             margin-left: -1%;
             margin-top: 77%;
         }
-        #agadir {
+        & label[for="agadir"] {
             margin-left: 39%;
             margin-top: 37%;
         }
-        #marrakech {
+        & label[for="marrakech"] {
             margin-left: 45%;
             margin-top: 30%;
         }
-        #safi {
+        & label[for="safi"] {
             margin-left: 43%;
             margin-top: 22%;
         }
-        #tangier {
+        & label[for="tangier"] {
             margin-left: 62%;
             margin-top: -5%;
         }
     }
 
     & .city {
+        display: none;
         flex-basis: 40%;
         background-color: white;
         border-radius: 1rem;
 
         & .image{
+            display: flex;
             position: relative;
 
             & img {
                 border-radius: 1rem;
+                height: 240px;
             }
 
             & .details {
@@ -428,6 +462,14 @@
                 }
             }
         }
+    }
+
+    &:has(input[id="dakhla"]:checked) .city.dakhla,
+    &:has(input[id="safi"]:checked) .city.safi,
+    &:has(input[id="marrakech"]:checked) .city.marrakech,
+    &:has(input[id="agadir"]:checked) .city.agadir,
+    &:has(input[id="tangier"]:checked) .city.tangier {
+        display: block;
     }
 }
 
