@@ -1,0 +1,140 @@
+
+
+.gastronomie_hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-bottom:100px;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+    &::before {
+        position: absolute;
+        content:"";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.242);
+    }
+}
+
+.gastronomie_title {
+    margin-bottom:80px;
+    & h1 {
+        font-size: 2rem;
+        width: 55%;
+        line-height: 1.3;
+        margin-bottom:20px
+    }
+    & p {
+        line-height: 1.5;
+    }
+}
+.pagination {
+    & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid black;
+        margin-bottom: 50px;
+        padding-inline:20px;
+        width: fit-content;
+        margin-inline: auto;
+        & input {
+            display: none;
+            &:checked {
+                & + label {
+                    color: var(--primary-color);
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        background-color: var(--primary-color);
+                        bottom: 0;
+                        right:0;
+                    }
+                }
+            }
+        }
+        & label {
+            cursor: pointer;
+            position: relative;
+            padding-bottom: 15px;
+            width: 100px;
+            text-align: center;
+            overflow: hidden;
+            margin-inline:5px;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 2px;
+                background-color: var(--primary-color);
+                bottom: 0;
+                right:100%;
+                transition: 0.4s ease;
+            }
+        }
+    }
+}
+.images_container {
+    display: flex;
+    justify-content: center;
+    .images {
+        margin-bottom: 100px;
+        display: flex;
+        align-items: center;
+        margin-inline: auto;
+        flex-wrap: nowrap;
+        width: fit-content;
+        gap:20px;
+        overflow-x: auto;
+        border:none;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        & div {
+            width: 300px;
+            height: 300px;
+            flex-shrink: 0;
+            background-color: blue;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        & .space {
+            width: 10px;
+            background-color: white;
+        }
+    }
+}
+
+.images > div {
+    display: none;
+  }
+  
+
+  .pagination:has(input[id="Harira"]:checked) + .images_container .images .harira,
+  .pagination:has(input[id="Atay"]:checked) + .images_container .images .atay,
+  .pagination:has(input[id="Zaalouk"]:checked) + .images_container .images .zaalouk,
+  .pagination:has(input[id="Couscous"]:checked) + .images_container .images .couscous,
+  .pagination:has(input[id="Tagine"]:checked) + .images_container .images .tajin,
+  .pagination:has(input[id="Bestila"]:checked) + .images_container .images .bestila,
+  .pagination:has(input[id="Chebakiya"]:checked) + .images_container .images .chebakiya {
+    display: block;
+  }
+
+@media (max-width:767px) {
+    .pagination > div {
+        padding-bottom:0px
+    }
+   .pagination > div label {
+    margin-bottom:10px;
+   }
+
+}
