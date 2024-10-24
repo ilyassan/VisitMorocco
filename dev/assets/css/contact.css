@@ -54,6 +54,9 @@ input#submit{
 .container_main form input:focus{
     box-shadow: 0 0 10px 4px #100d0a62;
 }
+.container_main form textarea:focus{
+    box-shadow: 0 0 10px 4px #100d0a62;
+}
 .container_main form input{
     background-color:#F3F3F3;
     border-radius: 10px 10px 10px 10px;
