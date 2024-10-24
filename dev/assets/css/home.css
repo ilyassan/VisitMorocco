@@ -7,6 +7,32 @@
     --transition-time: 300ms;
 }
 
+.hero {
+    display: flex;
+    position: relative;
+
+    video {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .1;
+    }
+}
+@media (max-width: 767px) {
+    .hero video {
+        height: 300px;
+    }
+}
+
 .inspired {
     display: flex;
     justify-content: space-between;
