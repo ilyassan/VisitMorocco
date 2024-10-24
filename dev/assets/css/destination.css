@@ -1,0 +1,68 @@
+main {
+    margin-bottom: 20px;
+}
+
+.destination-hero {
+    width: 100%;
+}
+.destination-hero img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.destination-description {
+    margin-block: 64px 20px;
+}
+
+.destination-images {
+    margin-bottom: 40px;
+}
+.destination-images .destination-filter-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    & .destination-item-color {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+.images-container {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    gap: 10px;
+    overflow: hidden;
+    margin-block: 20px;
+}
+.images-container .left-images {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+        height: 50%;
+        object-fit: cover;
+    }
+}
+.images-container .right-images {
+    height: 100%;
+    width: 50%;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 767px) {
+    .destination-hero img {
+        height: 250px;
+    }
+}
