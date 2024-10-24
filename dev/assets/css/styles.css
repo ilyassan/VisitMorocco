@@ -83,6 +83,8 @@ body {
     font-size: 2rem;
 }
 .btn {
+    display: inline-block;
+    text-align: center;
     padding: .75rem 1rem;
     border-radius: .8rem;
     background: var(--gray-light-color);
@@ -92,7 +94,8 @@ body {
 .btn:hover {
     background: var(--gray-dark-color);
 }
-.btn.active {
+.btn.active,
+input:checked + label.btn {
     background: var(--dark-color);
     color: white;
 }

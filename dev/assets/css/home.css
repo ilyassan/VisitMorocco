@@ -36,7 +36,6 @@
 .inspired {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-block: 4rem;
     overflow: hidden;
 }
@@ -87,6 +86,7 @@
         flex-basis: auto;
         align-items: flex-start;
         gap: 1rem;
+        align-self: center;
 
         & span {
             margin: 1rem 0 0;
@@ -98,17 +98,45 @@
         margin-bottom: 0;
     }
 }
-.inspired .head .filters .btn{
-    width: 7rem;
-}
-.inspired .cards {
+.inspired .head .filters {
     display: flex;
     gap: 1rem;
-    margin-top: 3rem;
 
-    & img {
-        border-radius: 1rem;
+    & .btn {
+        width: 5.5rem;
     }
+    & input {
+        display: none;
+    }
+}
+.inspired .content .cards {
+    display: none;
+    gap: 1rem;
+    margin-top: 3rem;
+    transition: all 600ms;
+
+    & .card {
+        min-width: 340px;
+        height: 240px;
+
+        & img {
+            border-radius: 1rem;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 994px) {
+    .inspired .cards {
+        padding-inline: 2rem;
+    }
+}
+
+.inspired .content:has(input:nth-of-type(1):checked) .cards.cards1,
+.inspired .content:has(input:nth-of-type(2):checked) .cards.cards2,
+.inspired .content:has(input:nth-of-type(3):checked) .cards.cards3 {
+    display: flex;
 }
 
 /* style of "experience you must try" */
