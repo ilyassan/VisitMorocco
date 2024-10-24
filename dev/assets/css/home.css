@@ -330,7 +330,10 @@
         position: relative;
         flex-basis: 400px;
 
-        & span {
+        & input {
+            display: none;
+        }
+        & label {
             left: 0;
             top: 0;
             position: absolute;
@@ -342,10 +345,6 @@
             cursor: pointer;
             transition: background-color var(--transition-time);
 
-            &.active,
-            &:hover {
-                background-color: var(--secondary-color);
-            }
             &::before {
                 content: "";
                 position: absolute;
@@ -359,44 +358,51 @@
                 border-top: .6rem solid var(--primary-color);
                 transition: border-top-color var(--transition-time);
             }
-            &:hover::before,
-            &.active::before {
-                border-top-color: var(--secondary-color);
-            }
+        }
+        & input:checked + label::before,
+        & label:hover::before {
+            border-top-color: var(--secondary-color);
+        }
+        & input:checked + label,
+        & label:hover{
+            background-color: var(--secondary-color);
         }
 
-        #dakhla {
+        & label[for="dakhla"] {
             margin-left: -1%;
             margin-top: 77%;
         }
-        #agadir {
+        & label[for="agadir"] {
             margin-left: 39%;
             margin-top: 37%;
         }
-        #marrakech {
+        & label[for="marrakech"] {
             margin-left: 45%;
             margin-top: 30%;
         }
-        #safi {
+        & label[for="safi"] {
             margin-left: 43%;
             margin-top: 22%;
         }
-        #tangier {
+        & label[for="tangier"] {
             margin-left: 62%;
             margin-top: -5%;
         }
     }
 
     & .city {
+        display: none;
         flex-basis: 40%;
         background-color: white;
         border-radius: 1rem;
 
         & .image{
+            display: flex;
             position: relative;
 
             & img {
                 border-radius: 1rem;
+                height: 240px;
             }
 
             & .details {
@@ -453,6 +459,14 @@
                 }
             }
         }
+    }
+
+    &:has(input[id="dakhla"]:checked) .city.dakhla,
+    &:has(input[id="safi"]:checked) .city.safi,
+    &:has(input[id="marrakech"]:checked) .city.marrakech,
+    &:has(input[id="agadir"]:checked) .city.agadir,
+    &:has(input[id="tangier"]:checked) .city.tangier {
+        display: block;
     }
 }
 
