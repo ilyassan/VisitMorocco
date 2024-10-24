@@ -1,5 +1,5 @@
 main {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .destination-hero {
@@ -87,3 +87,57 @@ main {
         }
     }
 }
+
+.pagination-section {
+    .pagination-images {
+        margin-block: 20px;
+        display: flex;
+        justify-content: space-between;
+        .card-image {
+            width: 24%;
+            img {
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+    }
+}
+.pagination-arrows {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    .fa-solid {
+        margin: 0 50px;
+        padding: 10px;
+        border-radius: 50%;
+        background: var(--gray-light-color);
+        cursor: pointer;
+    }
+    .btn {
+        border-radius: 50%;
+    }
+    .fa-solid:hover {
+        background: var(--gray-light-color);
+    }
+}
+
+@media (max-width: 767px) {
+    .pagination-section {
+        .pagination-images {
+            flex-wrap: wrap;
+            .card-image {
+                width: 49%;
+                margin-bottom: 6px;
+            }
+        }
+    }
+    .pagination-arrows {
+        gap: 10px;
+        .fa-solid {
+            margin: 0 10px;
+        }
+    }
+}
+
