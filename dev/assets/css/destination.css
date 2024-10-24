@@ -15,6 +15,15 @@ main {
     margin-block: 64px 20px;
 }
 
+.destination-description h1 {
+    width: 60%;
+    line-height: 1.4;
+}
+
+.destination-description .paragraph {
+    line-height: 1.5;
+}
+
 .destination-images {
     margin-bottom: 40px;
 }
@@ -65,4 +74,8 @@ main {
     .destination-hero img {
         height: 250px;
     }
+    
+.destination-description h1 {
+    width: 100%;
+}
 }
