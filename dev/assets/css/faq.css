@@ -1,123 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=League+Spartan:wght@100..900&display=swap');
+
+
+body{
+    font-family:"comfortaa";
+
+
+}
 h1{
-
     font-size: 2rem;
-    margin-top: 9rem;
-    text-align: center;
 }
-.question1{
-    font-size: 0.7rem;
-    color: #90938F;
-    text-align: center;
-    margin-top: 1.5rem;
+.faq-container{
+margin-top: 5rem;
+padding-inline:10px;
+}
+.faq-container details{
+    margin: auto;
+max-width: 50rem;
+margin-top: 0.5rem;
+padding: 1rem;
+background-color: #F3F3F3;
 
 }
-.questions{
-    margin-top: 5rem;
+.faq-container summary{
+    font-size: 0.9rem;
 }
+h1{
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+p{
+    text-align: center;
+    color: gray;
 
-.questions div
-{
+}
+.faq-container details p{
+    text-align: start;
+    font-size: 0.85rem;
+}
+details{
+margin-bottom: 1rem;
+padding-bottom: 1rem;
+transition: 1s;
+}
+summary{
+    cursor: pointer;
+    padding: 1rem;
+    color: black;
+    font-weight: bold;
+    
     display: flex;
-    background-color: #F3F3F3;
-    height: 3.5rem;
-    margin-top: 0.5rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    align-items: center;
-    padding-left: 1rem;
     justify-content: space-between;
+    align-items: center;
+    transition: 2s;
+    
+}
+summary::after{
+    content:'\276F' ;
+    transform: rotate(90deg);
+    font-size: 1.2rem;
+    transition: 0.5s;
 }
 
-.questions p{
-    font-size: 0.8rem;
+details[open] summary::after {
+    transform: rotate(270deg);
 }
-.image{
-    size: 1rem;
-padding-right: 1rem;
+
+details p{
+    padding: 0.8rem;
+    padding-right: 2rem;
+    color: black;
 }
-.imgup{
-    size: 1rem;
-    padding-right: 1rem;
-}
-.note
-{
-    font-size: 0.8rem;
-    display: flex;
-    background-color: #F3F3F3;
-    height: 3.5rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    align-items: center;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 2rem;
-    line-height: 1.6;
-}
-.question2{
-    font-size: 0.8rem;
-    color: #90938F;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-h2{
+.faq-derniere-question{
+    margin-top: 4rem;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    color: black;
     text-align: center;
+}
+.faq-fin{
+    text-align: center;
+    color: gray;
+
 }
 .contactus{
-    font-size: 0.8;
     color: black;
-    padding-left: 0.2rem;
-    outline: none;
-    border: none;
-    margin-bottom: 1rem;
 }
 
-/* --------mobile------------------------------------- */
 
-@media (max-width: 767px){
-    h1{
-    
-        font-size:2rem;
+@media(max-width : 767px){
 
-    }
-    .question1{
-        font-size: 0.8rem;
-        color: #90938F;
+
+    h1 {
+        font-size: 1.5rem;
         text-align: center;
-        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        text-align: center;
+        color: gray;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        line-height: 2rem;
     
     }
-    .questions div
-    {
-        display: flex;
-        background-color: #F3F3F3;
-        height: 3.5rem;
-        width: 100%;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 2rem;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
+    .faq-fin{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        line-height: 2rem;
     }
-    .questions p{
-        font-size: 1rem;
-    }
-    .note
-{
-    display: flex;
-    background-color: #F3F3F3;
-    height: 3rem;
-    width: 102.18%;
-
-    margin-left: 1rem;
-    margin-right: 1rem;
-    align-items: center;
-    padding-bottom: 2rem;
-}
-
 
 }
