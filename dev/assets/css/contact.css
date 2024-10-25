@@ -4,6 +4,8 @@
     margin-top: 4rem;
 
 }
+
+
 .container_main p{
     margin-bottom: 4rem;
     line-height: 1.5;
@@ -110,4 +112,17 @@ input#submit{
         font-size:20px;
     }
     
+}
+
+
+input:focus {
+    outline:none;
+    margin-top:10px;
+}
+
+textarea:focus {
+    outline:none;
+}
+textarea {
+    padding-top: 15px;
 }
