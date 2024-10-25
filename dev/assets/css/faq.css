@@ -5,12 +5,9 @@ body{
     font-family:"comfortaa";
 }
 .title {
-    margin-top:100px;
+    margin-top: 5rem;
     text-align: center;
 
-    & h1{
-        font-size: 2rem;
-    }
     & p {
         font-size: 0.8rem;
     }
@@ -29,10 +26,6 @@ body{
 }
 .faq-container summary{
     font-size: 0.9rem;
-}
-h1{
-    text-align: center;
-    margin-bottom: 0.8rem;
 }
 .faq-container details p{
     color: gray;

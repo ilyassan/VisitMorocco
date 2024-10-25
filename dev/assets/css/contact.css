@@ -1,21 +1,20 @@
-
-.container_main h1{
-    font-size: 260%;
-    margin-top: 4rem;
-
+.container_main .title {
+    text-align: center;
 }
-
-
+.container_main .title-section {
+    margin-top: 5rem;
+}
 .container_main p{
     margin-bottom: 4rem;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: .8rem;
 }
 .container_main{
     margin-bottom: 8rem;
 }
 .firstName_lastName{
   display: flex;
+  gap: 1rem;
 }
 .firstName_lastName div{
     width: 95%;
@@ -26,7 +25,7 @@
 input#email{
     width: 97%;
 }
-input#phon{
+input#phone{
     width: 97%;
 }
 textarea#message{
