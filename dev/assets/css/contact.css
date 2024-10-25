@@ -1,10 +1,12 @@
 
 .container_main h1{
-    font-size: 200%;
+    font-size: 260%;
     margin-top: 4rem;
+
 }
 .container_main p{
     margin-bottom: 4rem;
+    line-height: 1.5;
     font-size: 18px;
 }
 .container_main{
@@ -14,22 +16,23 @@
   display: flex;
 }
 .firstName_lastName div{
-    width: 98%;
+    width: 95%;
 }
 .firstName_lastName div input{
-    width: 98%;
+    width: 95%;
 }
 input#email{
-    width: 99%;
+    width: 97%;
 }
 input#phon{
-    width: 99%;
+    width: 97%;
 }
-input#message{
-    width: 99%;
+textarea#message{
+    width: 97%;
 }
 input#submit{
-    width: 99%;
+    width: 98%;
+    height: 4rem;
 }
 .container_main{
     margin-left: 4%;
@@ -40,31 +43,40 @@ input#submit{
    height: 3rem;
    margin-top:2px ;
 }
+.container_main form textarea{
+    margin-bottom: 4%;
+    border: none;
+   height: 3rem;
+   margin-top:2px ;
+   background-color:#F3F3F3;
+   padding-left: 20px;
+}
+
 .container_main form input:focus{
     box-shadow: 0 0 10px 4px #100d0a62;
 }
+.container_main form textarea:focus{
+    box-shadow: 0 0 10px 4px #100d0a62;
+}
 .container_main form input{
-    background-color:#F3F3F3 ;
+    background-color:#F3F3F3;
     border-radius: 10px 10px 10px 10px;
+    padding-left: 20px;
+    font-size: 1rem;
 }
 .container_main form input#submit{
     background-color: #473D3A;
     color: #fff;
 }
-.container_main form input#message{
+.container_main form textarea#message{
     height: 10rem;
 }
-.container_main form input:valid{
-    background-color: #B25E39;
-    transition: 3s;
-   font-size: 20px;
-   color: #F3F3F3;
-}
+
 
 @media  screen and (max-width: 767px){
     .container_main h1{
        text-align: center;
-       font-size: 250%;
+       font-size: 300%;
     }
     .container_main p{
        text-align: center;
@@ -74,22 +86,22 @@ input#submit{
        display: inline;
       }
       .firstName_lastName div{
-        width: 98%;
+        width: 96%;
     }
     .firstName_lastName div input{
-        width: 98%;
+        width: 96%;
     }
     input#email{
-        width:98%;
+        width: 93%;
     }
     input#phon{
-        width: 98%;
+        width: 93%;
     }
-    input#message{
-        width: 98%;
+    textarea#message{
+        width: 93%;
     }
     input#submit{
-        width: 98%;
+        width: 95%;
     }
     #labellastname{
         margin-left: 0;

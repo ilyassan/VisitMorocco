@@ -7,12 +7,37 @@
   --transition-time: 300ms;
 }
 
+.hero {
+    display: flex;
+    position: relative;
+
+    video {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .1;
+    }
+}
+@media (max-width: 767px) {
+    .hero video {
+        height: 300px;
+    }
+}
+
 .inspired {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 4rem;
-  overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 4rem;
+    overflow: hidden;
 }
 @media (max-width: 994px) {
   .inspired {
@@ -54,13 +79,14 @@
   justify-content: space-between;
 }
 @media (max-width: 994px) {
-  .inspired .head {
-    flex-direction: column;
-  }
-  .inspired .controll {
-    flex-basis: auto;
-    align-items: flex-start;
-    gap: 1rem;
+    .inspired .head {
+        flex-direction: column;
+    }
+    .inspired .controll {
+        flex-basis: auto;
+        align-items: flex-start;
+        gap: 1rem;
+        align-self: center;
 
     & span {
       margin: 1rem 0 0;
@@ -72,17 +98,45 @@
     margin-bottom: 0;
   }
 }
-.inspired .head .filters .btn {
-  width: 7rem;
-}
-.inspired .cards {
-  display: flex;
-  gap: 1rem;
-  margin-top: 3rem;
+.inspired .head .filters {
+    display: flex;
+    gap: 1rem;
 
-  & img {
-    border-radius: 1rem;
-  }
+    & .btn {
+        width: 5.5rem;
+    }
+    & input {
+        display: none;
+    }
+}
+.inspired .content .cards {
+    display: none;
+    gap: 1rem;
+    margin-top: 3rem;
+    transition: all 600ms;
+
+    & .card {
+        min-width: 340px;
+        height: 240px;
+
+        & img {
+            border-radius: 1rem;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 994px) {
+    .inspired .cards {
+        padding-inline: 2rem;
+    }
+}
+
+.inspired .content:has(input:nth-of-type(1):checked) .cards.cards1,
+.inspired .content:has(input:nth-of-type(2):checked) .cards.cards2,
+.inspired .content:has(input:nth-of-type(3):checked) .cards.cards3 {
+    display: flex;
 }
 
 /* style of "experience you must try" */
@@ -305,74 +359,80 @@
     position: relative;
     flex-basis: 400px;
 
-    & span {
-      left: 0;
-      top: 0;
-      position: absolute;
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.3rem 1rem;
-      font-size: 0.8rem;
-      border-radius: 1rem;
-      cursor: pointer;
-      transition: background-color var(--transition-time);
+        & input {
+            display: none;
+        }
+        & label {
+            left: 0;
+            top: 0;
+            position: absolute;
+            background-color: var(--primary-color);
+            color: white;
+            padding: .3rem 1rem;
+            font-size: .8rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: background-color var(--transition-time);
 
-      &.active,
-      &:hover {
-        background-color: var(--secondary-color);
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 95%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 0;
-        border-left: 0.6rem solid transparent;
-        border-right: 0.6rem solid transparent;
-        border-top: 0.6rem solid var(--primary-color);
-        transition: border-top-color var(--transition-time);
-      }
-      &:hover::before,
-      &.active::before {
-        border-top-color: var(--secondary-color);
-      }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 95%;
+                transform: translateX(-50%);
+                width: 0; 
+                height: 0; 
+                border-left: .6rem solid transparent;
+                border-right: .6rem solid transparent;
+                border-top: .6rem solid var(--primary-color);
+                transition: border-top-color var(--transition-time);
+            }
+        }
+        & input:checked + label::before,
+        & label:hover::before {
+            border-top-color: var(--secondary-color);
+        }
+        & input:checked + label,
+        & label:hover{
+            background-color: var(--secondary-color);
+        }
+
+        & label[for="dakhla"] {
+            margin-left: -1%;
+            margin-top: 77%;
+        }
+        & label[for="agadir"] {
+            margin-left: 39%;
+            margin-top: 37%;
+        }
+        & label[for="marrakech"] {
+            margin-left: 45%;
+            margin-top: 30%;
+        }
+        & label[for="safi"] {
+            margin-left: 43%;
+            margin-top: 22%;
+        }
+        & label[for="tangier"] {
+            margin-left: 62%;
+            margin-top: -5%;
+        }
     }
 
-    #dakhla {
-      margin-left: -1%;
-      margin-top: 77%;
-    }
-    #agadir {
-      margin-left: 39%;
-      margin-top: 37%;
-    }
-    #marrakech {
-      margin-left: 45%;
-      margin-top: 30%;
-    }
-    #safi {
-      margin-left: 43%;
-      margin-top: 22%;
-    }
-    #tangier {
-      margin-left: 62%;
-      margin-top: -5%;
-    }
-  }
-
-  & .city {
-    flex-basis: 40%;
-    background-color: white;
-    border-radius: 1rem;
-
-    & .image {
-      position: relative;
-
-      & img {
+    & .city {
+        display: none;
+        flex-basis: 40%;
+        background-color: white;
         border-radius: 1rem;
-      }
+
+        & .image{
+            display: flex;
+            position: relative;
+
+            & img {
+                border-radius: 1rem;
+                height: 240px;
+            }
 
       & .details {
         position: absolute;
@@ -418,17 +478,25 @@
         align-items: center;
         gap: 0.8rem;
 
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          background-color: var(--primary-color);
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: var(--primary-color);
+                }
+            }
         }
-      }
     }
-  }
+
+    &:has(input[id="dakhla"]:checked) .city.dakhla,
+    &:has(input[id="safi"]:checked) .city.safi,
+    &:has(input[id="marrakech"]:checked) .city.marrakech,
+    &:has(input[id="agadir"]:checked) .city.agadir,
+    &:has(input[id="tangier"]:checked) .city.tangier {
+        display: block;
+    }
 }
 
 @media (max-width: 700px) {
