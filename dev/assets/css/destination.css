@@ -43,7 +43,6 @@ main {
                 height: 100%;
                 background-color: black;
                 opacity: .55;
-                border-radius: 1rem;
             }
         }
     }
@@ -68,36 +67,58 @@ main {
                 opacity: 1;
             }
         }
-}
+    }
+
+    &::before {
+        content: "Find Your Destination";
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        color: white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        z-index: 1;
+    }
 }
 .destination-description {
-    margin-block: 64px 20px;
-}
-p {
-    line-height: 1.4;
+    margin-block: 4rem 1.4rem;
+
+    & p {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        line-height: 1.5rem;
+    }
 }
 
 .destination-images {
     margin-bottom: 40px;
-    .destination-filter-items {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    & .destination-item-color {
+    & .destination-filter-items {
         display: flex;
-        gap: 10px;
+        align-items: center;
         flex-wrap: wrap;
-        input {
-            display: none;
+        gap: 10px;
+
+        & .destination-item-color {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            input {
+                display: none;
+            }
+            input:checked + label {
+                background-color: var(--dark-color);
+                color: white;
+            }
         }
-        input:checked + label {
-            background-color: var(--dark-color);
-            color: white;
+
+        & > span {
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: var(--dark-color);
         }
     }
-}
 }
 
 .images-container .gallery {
@@ -173,11 +194,13 @@ p {
 }
 
 .pagination-section {
-    .pagination-images {
+    margin-top: 4rem;
+
+    & .pagination-images {
         margin-block: 20px;
         display: none;
         justify-content: space-between;
-        .card-image {
+        & .card-image {
             width: 24%;
             img {
                 border-radius: 10px;
