@@ -202,11 +202,39 @@ main {
         justify-content: space-between;
         & .card-image {
             width: 24%;
+            position: relative;
+            overflow: hidden;
             img {
                 border-radius: 10px;
                 width: 100%;
                 height: 300px;
                 object-fit: cover;
+            }
+            .overlay {
+                transition: 0.6s;
+                position: absolute;
+                width: 100%;
+                height: 99%;
+                background-color: rgba(0, 0, 0, 0.712);
+                top:-100%;
+                left:0;
+                border-radius: 10px;
+                padding: 10px;
+                box-sizing: border-box;
+                color:white;
+                .overlay_header {
+                    text-align: center;
+                    color:white;
+                    font-size: 1.4rem;
+                    margin-top:20px;
+                }
+                .overlay_description {
+                    margin-top:1rem;
+                    font-size: 0.9rem;
+                }
+            }
+            &:hover .overlay {
+                top: 0;
             }
         }
     }
@@ -247,6 +275,7 @@ main {
         .pagination-images {
             flex-wrap: wrap;
             .card-image {
+                position: relative;
                 width: 49.5%;
                 height: 160px;
                 margin-bottom: 3px;
@@ -255,6 +284,7 @@ main {
                     height: 100%;
                     object-fit: cover;
                 }
+                
             }
         }
     }
