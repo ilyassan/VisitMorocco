@@ -235,6 +235,7 @@ main {
                 }
                 .overlay_description {
                     margin-top:1rem;
+                    line-height: 1.4;
                     font-size: 0.9rem;
                 }
             }
