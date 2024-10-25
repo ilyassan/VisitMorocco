@@ -342,7 +342,7 @@ footer .lists {
   align-items: flex-start;
   margin-bottom: 2rem;
 }
-footer .list h3 {
+footer .list > div {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
