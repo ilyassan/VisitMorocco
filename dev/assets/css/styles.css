@@ -135,6 +135,9 @@ button {
   outline: none;
   border: none;
 }
+img {
+  user-select: none;
+}
 
 /* Global */
 
