@@ -73,6 +73,9 @@ main {
 .destination-description {
     margin-block: 64px 20px;
 }
+p {
+    line-height: 1.4;
+}
 
 .destination-images {
     margin-bottom: 40px;
@@ -145,7 +148,7 @@ main {
     .images-container .gallery {
         overflow-y: auto;
         height: 300px;
-        display: block;
+        display: none;
         width: auto;
         .left-images {
             flex-direction: row;
@@ -159,6 +162,13 @@ main {
             width: 100%;
             display: none;
         }
+    }
+    .destination-images:has(input:nth-last-of-type(5):checked) .images-container .reds,
+    .destination-images:has(input:nth-last-of-type(4):checked) .images-container .yellows,
+    .destination-images:has(input:nth-last-of-type(3):checked) .images-container .blues,
+    .destination-images:has(input:nth-last-of-type(2):checked) .images-container .whites,
+    .destination-images:has(input:nth-last-of-type(1):checked) .images-container .greens {
+        display: flex;
     }
 }
 
@@ -213,5 +223,4 @@ main {
             margin: 0 10px;
         }
     }
-}
 }
