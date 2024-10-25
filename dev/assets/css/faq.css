@@ -6,6 +6,8 @@ body{
 }
 .title {
     margin-top:100px;
+    text-align: center;
+
     & h1{
         font-size: 2rem;
     }
@@ -14,15 +16,15 @@ body{
     }
 }
 .faq-container{
-margin-top: 5rem;
-padding-inline:10px;
+    margin-top: 5rem;
+    padding-inline:10px;
 }
 .faq-container details{
     margin: auto;
-max-width: 50rem;
-margin-top: 0.5rem;
-padding: 1rem;
-background-color: #F3F3F3;
+    max-width: 50rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: #F3F3F3;
 
 }
 .faq-container summary{
@@ -32,31 +34,27 @@ h1{
     text-align: center;
     margin-bottom: 0.8rem;
 }
-p{
-    text-align: center;
-    color: gray;
-
-}
 .faq-container details p{
-    text-align: start;
+    color: gray;
     font-size: 0.85rem;
+    line-height: 1.4rem;
+    padding: 0.8rem;
+    padding-right: 2rem;
 }
 details{
-margin-bottom: 1rem;
-padding-bottom: 1rem;
-transition: 1s;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
 }
 summary{
     cursor: pointer;
     padding: 1rem;
     color: black;
     font-weight: bold;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: 2s;
-    
 }
 summary::after{
     content:'\276F' ;
@@ -68,11 +66,8 @@ summary::after{
 details[open] summary::after {
     transform: rotate(270deg);
 }
-
-details p{
-    padding: 0.8rem;
-    padding-right: 2rem;
-    color: black;
+details[open] summary ~ p {
+    animation: sweep .5s ease-in-out;
 }
 .faq-derniere-question{
     margin-top: 4rem;
@@ -89,34 +84,15 @@ details p{
     color: black;
 }
 
-
-@media(max-width : 767px){
-
-
-    h1 {
-        font-size: 1.5rem;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    p{
-        text-align: center;
-        color: gray;
-        padding-right: 2rem;
-        padding-left: 2rem;
-        line-height: 2rem;
-    
-    }
-    .faq-fin{
-        padding-left: 2rem;
-        padding-right: 2rem;
-        line-height: 2rem;
-    }
-
-}
 .end_title {
-    margin-block:100px;
+    margin-block: 55px;
     & .sm {
         font-size: 0.8rem;
     }
+}
+
+/* Animations */
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
 }
