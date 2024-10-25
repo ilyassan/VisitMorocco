@@ -34,12 +34,8 @@
 
     <!-- Inspired Section -->
       <div class="inspired">
-        <div class="controll">
-          <span><i class="fa-solid fa-arrow-left"></i></span>
-          <span><i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-        <div class="content">
-          <div class="head container">
+        <div class="container">
+          <div class="head">
             <h1 class="title-section">Get Inspired</h1>
             <div class="filters">
               <input checked type="radio" name="inspire" id="mosques">
@@ -349,47 +345,5 @@
       <div class="copyright">CopyRight @ 2024 All Right Reserved</div>
     </footer>
 
-    <script>
-      const btns = Array.from(document.querySelectorAll('.inspired .filters input'));
-
-      function updateSlider() { 
-        const i = btns.findIndex(input => input.checked);
-        const slider = document.querySelectorAll('.inspired .cards')[i];
-
-        const cards = slider.querySelectorAll('.card');
-        const totalCards = cards.length;
-        let currentIndex = 0;
-
-        slider.style.transform = `translateX(0)`;
-
-        function moveToIndex(index) {
-          if (index < 0) {
-            currentIndex = totalCards - 1;
-          } else if (index >= totalCards) {
-            currentIndex = 0;
-          } else {
-            currentIndex = index;
-          }
-
-          // Move the slider
-          slider.style.transform = `translateX(calc(${-currentIndex * 340}px - ${currentIndex}rem))`;
-        }
-
-        // Go to previous image
-        document.querySelector('.inspired .controll .fa-arrow-left').addEventListener('click', () => {
-          moveToIndex(currentIndex - 1);
-        });
-        // Go to next image
-        document.querySelector('.inspired .controll .fa-arrow-right').addEventListener('click', () => {
-          moveToIndex(currentIndex + 1);
-        });
-      }
-
-      btns.forEach(input => {
-        input.addEventListener('change', updateSlider);
-      });
-
-      updateSlider();
-    </script>
   </body>
 </html>
