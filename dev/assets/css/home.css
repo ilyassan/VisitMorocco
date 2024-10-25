@@ -1,10 +1,10 @@
 :root {
-    --primary-color:  #B25E39;
-    --secondary-color:  #A88F68;
-    --dark-color: #473D3A;
-    --gray-light-color: #F3F3F3;
-    --gray-dark-color: #DDDCDC; 
-    --transition-time: 300ms;
+  --primary-color: #b25e39;
+  --secondary-color: #a88f68;
+  --dark-color: #473d3a;
+  --gray-light-color: #f3f3f3;
+  --gray-dark-color: #dddcdc;
+  --transition-time: 300ms;
 }
 
 .hero {
@@ -40,10 +40,11 @@
     overflow: hidden;
 }
 @media (max-width: 994px) {
-    .inspired {
-        flex-direction: column-reverse;
-    }
+  .inspired {
+    flex-direction: column-reverse;
+  }
 }
+
 .inspired .container {
     flex: 1;
     overflow: hidden;
@@ -53,16 +54,16 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
-}
+
 @media (max-width: 994px) {
     .inspired .head {
         flex-direction: column;
     }
 }
 @media (min-width: 994px) {
-    .inspired .title-section {
-        margin-bottom: 0;
-    }
+  .inspired .title-section {
+    margin-bottom: 0;
+  }
 }
 .inspired .head .filters {
     display: flex;
@@ -111,197 +112,223 @@
 
 /* style of "experience you must try" */
 .experiences {
-    margin-block: 40px;
+  margin-block: 40px;
 }
 
 .experiences .title {
-    font-size: 2rem;
-    padding-block: 10px;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  padding-block: 10px;
+  margin-bottom: 20px;
 }
 
 .experiences .title span {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .experiences .experiences-list {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    padding-block: 10px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding-block: 10px;
+  input {
+    display: none;
+  }
+  input:checked + label {
+    background: var(--dark-color);
+    color: white;
+  }
 }
 
-.experiences .images-container {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    margin-block: 20px;
-    
-    img {
-        width: 32.5%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+.experiences .images-container .gallery {
+  display: none;
+  gap: 10px;
+  justify-content: space-between;
+  margin-block: 20px;
+  img {
+    width: 32.5%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.experiences:has(input:nth-last-of-type(4):checked) .images-container .trekking,
+.experiences:has(input:nth-last-of-type(3):checked) .images-container .riding,
+.experiences:has(input:nth-last-of-type(2):checked) .images-container .surfing,
+.experiences:has(input:nth-last-of-type(1):checked)
+  .images-container
+  .horse-rifing {
+  display: flex;
 }
 
 .experiences .find-destination-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  a {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    button {
-        display: flex;
-        gap: 1rem;
-        font-size: 1.3rem;
-        padding: 10px 30px;
-        cursor: pointer;
-        border-radius: 10px;
-        border: none;
-        background-color: var(--gray-light-color);
-        transition: all var(--transition-time);
-    }
-    button:hover {
-        background: var(--dark-color);
-        color: white;
-    }
+    gap: 1rem;
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--gray-light-color);
+    transition: all var(--transition-time);
+  }
+  a:hover {
+    background: var(--dark-color);
+    color: white;
+  }
 }
 
 @media (max-width: 767px) {
-    .experiences .experiences-list {
-        gap: 10px;
+  .experiences .experiences-list {
+    gap: 10px;
+    flex-wrap: wrap;
+    input {
+      display: none;
     }
-    .experiences .title {
-        margin-bottom: 5px;
+  }
+  .experiences .title {
+    margin-bottom: 5px;
+  }
+  .experiences .images-container .gallery {
+    overflow-y: auto;
+    img {
+      width: 70%;
+      height: 250px;
     }
-    .experiences-list {
-        flex-wrap: wrap;
-    }
-    .experiences .images-container {
-        overflow-y: auto;
-        img {
-            width: 70%;
-            height: 250px;
-        }
-    }
-    ::-webkit-scrollbar{
-        display: none;
-    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
-
 
 /* style of "explore morocco food" */
 .explore-food {
-    background: var(--gray-light-color);
-    padding: 40px;
+  background: var(--gray-light-color);
+  padding: 40px;
 }
 
 .explore-food .title {
-    font-size: 2rem;
-    padding-block: 10px;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  padding-block: 10px;
+  margin-bottom: 20px;
 }
 
 .explore-food .images-container {
-    display: flex;
-    gap: 10px;
-    overflow-y: auto;
+  display: flex;
+  gap: 10px;
+  overflow-y: auto;
 }
 
 .explore-food .images-container .food-card {
-    width: 100%; /* Set a specific width for the cards */
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden; /* Ensures the overlay stays within the card */
+  width: 100%; /* Set a specific width for the cards */
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden; /* Ensures the overlay stays within the card */
 }
 
 .explore-food .images-container .food-card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 1rem;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 .explore-food .images-container .food-card .overlay {
-    position: absolute;
-    border-radius: 15px;
-    color: white;
-    top: -200%;
-    background: linear-gradient(var(--primary-color) 20%, transparent);
-    filter: opacity(0.9);
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 40px;
-    gap: 20px;
-    height: 300px;
-    user-select: none;
-    transition: top ease-in-out var(--transition-time);
+  position: absolute;
+  border-radius: 15px;
+  color: white;
+  top: -200%;
+  background: linear-gradient(var(--primary-color) 20%, transparent);
+  /* background: red; */
+  filter: opacity(0.9);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  gap: 20px;
+  height: 100%;
+  user-select: none;
+  transition: top ease-in-out var(--transition-time);
 }
 .explore-food .images-container .food-card:hover .overlay {
-    top: 0;
+  top: 0;
 }
 .explore-food .images-container .food-card .overlay h3 {
-    font-size: 2rem;
-    color: white;
+  font-size: 2.3rem;
+  color: white;
+  padding: 30px 0;
+}
+.explore-food .images-container .food-card .overlay p {
+  padding: 10px 40px;
+  line-height: 20px;
+  font-weight: bold;
 }
 
 .explore-food .show-more-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  a {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 20px;
-    button {
-        display: flex;
-        gap: 1rem;
-        font-size: 1.3rem;
-        padding: 10px 30px;
-        cursor: pointer;
-        border-radius: 10px;
-        border: none;
-        background-color: white;
-        transition: all var(--transition-time);
-    }
-    button:hover {
-        background: var(--dark-color);
-        color: white;
-    }
+    gap: 1rem;
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    transition: all var(--transition-time);
+  }
+  a:hover {
+    background: var(--dark-color);
+    color: white;
+  }
 }
 
 @media (max-width: 767px) {
-    .explore-food {
-        padding: 20px;
+  .explore-food {
+    padding: 20px;
+  }
+  .explore-food .images-container .food-card {
+    flex: 0 0 auto; /* Prevents cards from shrinking */
+    width: 300px; /* Set a specific width for the cards */
+  }
+  .explore-food .images-container .food-card img {
+    width: 300px;
+    height: 250px;
+  }
+  .explore-food .images-container .food-card .overlay {
+    background: linear-gradient(var(--primary-color) 40%, transparent);
+    border-radius: 10px;
+    height: 100%;
+    p {
+      padding: 5px;
     }
-    .explore-food .images-container .food-card {
-        flex: 0 0 auto; /* Prevents cards from shrinking */
-        width: 300px; /* Set a specific width for the cards */
+    h3 {
+      padding: 10px 0;
     }
-    .explore-food .images-container .food-card img {
-        width: 300px;
-        height: 250px;
-    }
-    .explore-food .images-container .food-card .overlay {
-        border-radius: 10px;
-    }
-    .explore-food .images-container .food-card .overlay {
-        height: 150px;
-    }
+  }
 }
-
 
 .explore-morocco {
-    background-color: var(--gray-light-color);
-    padding-block: 40px;
+  background-color: var(--gray-light-color);
+  padding-block: 40px;
 }
 .explore-morocco .content {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 
-    & img {
-        width: 100%;
-    }
-    & .map {
-        position: relative;
-        flex-basis: 400px;
+  & img {
+    width: 100%;
+  }
+  & .map {
+    position: relative;
+    flex-basis: 400px;
 
         & input {
             display: none;
@@ -378,49 +405,49 @@
                 height: 240px;
             }
 
-            & .details {
-                position: absolute;
-                padding-inline: 2rem;
-                text-align: center;
-                top: 50%;
-                transform: translateY(-50%);
-                color: white;
+      & .details {
+        position: absolute;
+        padding-inline: 2rem;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
 
-                & h3 {
-                    font-size: 3rem;
-                    font-weight: bold;
-                    margin-bottom: 1.5rem;
-                }
-                & p {
-                    line-height: 1.5rem;
-                }
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: var(--primary-color);
-                border-radius: 1rem;
-                opacity: 0.65;
-            }
+        & h3 {
+          font-size: 3rem;
+          font-weight: bold;
+          margin-bottom: 1.5rem;
         }
+        & p {
+          line-height: 1.5rem;
+        }
+      }
 
-        & .places {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color);
+        border-radius: 1rem;
+        opacity: 0.65;
+      }
+    }
 
-            & p {
-                font-size: 1.6rem;
-                color: var(--primary-color);
-                display: flex;
-                align-items: center;
-                gap: .8rem;
+    & .places {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      & p {
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
 
                 &::before {
                     content: "";
@@ -444,8 +471,8 @@
 }
 
 @media (max-width: 700px) {
-    .explore-morocco .content {
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .explore-morocco .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
