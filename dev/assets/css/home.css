@@ -144,7 +144,7 @@
   display: none;
   gap: 10px;
   justify-content: space-between;
-  margin-block: 20px;
+  margin-top: 1.4rem;
   img {
     width: 32.5%;
     height: 400px;
@@ -166,6 +166,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 3rem;
   a {
     display: flex;
     gap: 1rem;
@@ -273,7 +274,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 3rem;
+
   a {
     display: flex;
     gap: 1rem;
