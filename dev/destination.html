@@ -17,17 +17,34 @@
       <input id="menu" type="checkbox" name="menu" />
       <label for="menu"><i class="menu fa-solid fa-bars"></i></label>
       <ul class="links">
-        <li><a href="./">Destinations</a></li>
-        <li><a href="./">Gastronomy</a></li>
-        <li><a href="./">FAQ</a></li>
-        <li><a href="./">Contact Us</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./destination.html" class="active">Destinations</a></li>
+        <li><a href="./gastronomy.html">Gastronomy</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
       </ul>
     </nav>
 
     <main>
-      <div class="destination-hero">
-        <img src="assets/images/destination/chefchaouen.jpg" alt="" />
-      </div>
+        <div class="destination-hero">
+          <div class="slider">
+            <div class="slide">
+              <img id="slide1" src="./assets/images/destination/img_hero/hero1.jpg" alt=""> 
+            </div>
+            <div class="slide">
+              <img id="slide2" src="./assets/images/destination/img_hero/hero2.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img id="slide3" src="./assets/images/destination/img_hero/hero3.jpg" alt="">
+            </div>
+          </div>
+          <div class="slider-nav">
+            <a href="#slide1"></a>
+            <a href="#slide2"></a>
+            <a href="#slide3"></a>
+          </div>
+        </div>
+
       <div class="destination-description container">
         <h1 class="title-section">
           Explore Morocco: A Journey Through Stunning Destinations
