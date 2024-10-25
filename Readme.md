@@ -1,6 +1,6 @@
 ## Brief 3 | VisitMorocco
 
-### Contect de projet
+### Contexte de projet
 L'Office National du Tourisme a chargé la startup "CodeShögun" de créer un site web pour présenter les destinations touristiques du Maroc. Ce site permettra aux visiteurs de découvrir les différentes régions, de planifier leurs voyages, et d'obtenir des informations utiles. L'objectif est de concevoir une plateforme moderne, intuitive, et attrayante, qui reflète la diversité culturelle et naturelle du Maroc.
 
 ### Lien de projet vers GitHub pages
@@ -35,7 +35,7 @@ Nous utilisons Planning Poker pour voter sur les différentes tâches et estimer
 
 Ces pages sont conçues pour offrir une navigation intuitive et des informations détaillées pour faciliter la préparation des visites.
 
-### méliorations du côté des maquette
+### Améliorations du côté des maquette
 Nous intégrerons une section avec une pagination pour afficher plusieurs images sur la page des destinations.
 
 ### Technologies utilisées
