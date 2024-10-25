@@ -8,6 +8,8 @@
     margin-bottom: 4rem;
     line-height: 1.5;
     font-size: .8rem;
+    width: 70%;
+    margin-inline:auto;
 }
 .container_main{
     margin-bottom: 8rem;
@@ -52,13 +54,6 @@ input#submit{
    background-color:#F3F3F3;
    padding-left: 20px;
 }
-
-.container_main form input:focus{
-    box-shadow: 0 0 10px 4px #100d0a62;
-}
-.container_main form textarea:focus{
-    box-shadow: 0 0 10px 4px #100d0a62;
-}
 .container_main form input{
     background-color:#F3F3F3;
     border-radius: 10px 10px 10px 10px;
@@ -71,17 +66,16 @@ input#submit{
 }
 .container_main form textarea#message{
     height: 10rem;
+    border-radius: 10px 10px 10px 10px;
 }
-
-
 @media  screen and (max-width: 767px){
     .container_main h1{
        text-align: center;
-       font-size: 300%;
+       font-size: 100%;
     }
     .container_main p{
        text-align: center;
-       font-size: 140%;
+      
     }
     .firstName_lastName{
        display: inline;
@@ -95,7 +89,7 @@ input#submit{
     input#email{
         width: 93%;
     }
-    input#phon{
+    input#phone{
         width: 93%;
     }
     textarea#message{
@@ -109,10 +103,8 @@ input#submit{
     }
     .container_main form label{
         font-size:20px;
-    }
-    
+    }  
 }
-
 
 input:focus {
     outline:none;
@@ -124,4 +116,9 @@ textarea:focus {
 }
 textarea {
     padding-top: 15px;
+}
+label{
+    display: inline-block;
+    margin-bottom: 0.4rem;
+    font-size:1rem !important;
 }
