@@ -82,6 +82,7 @@
     gap: 1rem;
     margin-top: 3rem;
     transition: all 600ms;
+    overflow-y: hidden;
     overflow-x: auto;
 
     & .card {
